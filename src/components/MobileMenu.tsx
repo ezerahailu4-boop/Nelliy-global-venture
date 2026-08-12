@@ -16,7 +16,6 @@ const NAV_ITEMS = [
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
-  const [commoditiesOpen, setCommoditiesOpen] = useState(true);
   const { theme, toggle } = useTheme();
 
   return (

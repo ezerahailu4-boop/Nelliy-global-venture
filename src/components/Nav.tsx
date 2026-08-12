@@ -41,9 +41,6 @@ export default function Nav() {
             <a
               href="#sectors"
               className="nav-dropdown-trigger"
-              onClick={(e) => {
-                // allow smooth scroll
-              }}
             >
               <span>Commodities</span>
               <motion.span
