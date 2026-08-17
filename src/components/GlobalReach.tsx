@@ -1,5 +1,18 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import TradeGlobe3D from "./TradeGlobe3D";
+
+const TradeGlobe3D = lazy(() => import("./TradeGlobe3D"));
+
+function GlobeSkeleton() {
+  return (
+    <div className="trade-globe-wrapper" style={{ minHeight: "480px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div style={{ textAlign: "center", color: "#38bdf8", fontFamily: "var(--font-mono)", fontSize: "12px" }}>
+        <span className="live-pulse" style={{ display: "inline-block", marginRight: "8px" }} />
+        Loading 3D Global Trade Network...
+      </div>
+    </div>
+  );
+}
 
 export default function GlobalReach() {
   return (
@@ -23,7 +36,9 @@ export default function GlobalReach() {
         </motion.div>
 
         <div className="global-reach-container">
-          <TradeGlobe3D />
+          <Suspense fallback={<GlobeSkeleton />}>
+            <TradeGlobe3D />
+          </Suspense>
         </div>
 
         {/* Trade Metrics Grid */}

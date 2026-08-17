@@ -46,9 +46,7 @@ export default function Hero() {
           poster="/hero-bg.png"
         >
           <source src="/4k-hero.mp4" type="video/mp4" />
-          <source src="/4k hero.mp4" type="video/mp4" />
           <source src="/hero-bg.mp4" type="video/mp4" />
-          <source src="/can_u_make_this_photo_into_vid.mp4" type="video/mp4" />
           {/* Fallback image */}
           <img src="/hero-bg.png" alt="Nelly Global Venture" className="hero-bg-img" />
         </video>
