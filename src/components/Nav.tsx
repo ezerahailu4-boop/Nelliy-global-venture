@@ -100,6 +100,12 @@ export default function Nav() {
             </AnimatePresence>
           </li>
 
+          {/* <li>
+            <a href="#global-reach" className="nav-globe-link">
+              <span className="nav-globe-dot" />
+              3D Trade Map
+            </a>
+          </li> */}
           <li>
             <a href="#products">Products & Specs</a>
           </li>

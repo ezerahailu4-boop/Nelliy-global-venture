@@ -12,11 +12,13 @@
     "server:build": "tsc -p tsconfig.server.json"
   },
   "dependencies": {
+    "@types/three": "^0.185.4",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "framer-motion": "^13.1.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "three": "^0.185.1",
     "vite-plugin-singlefile": "^2.3.3"
   },
   "devDependencies": {

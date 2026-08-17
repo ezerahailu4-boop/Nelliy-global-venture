@@ -6,6 +6,7 @@ import { COMMODITY_SECTORS } from "../content";
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Commodities", href: "#sectors", sub: COMMODITY_SECTORS },
+  // { label: "3D Trade Map", href: "#global-reach" },
   { label: "Products & Specs", href: "#products" },
   { label: "Business Areas", href: "#business" },
   { label: "Values", href: "#values" },

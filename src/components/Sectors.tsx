@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { COMMODITY_SECTORS } from "../content";
+import TiltCard3D from "./TiltCard3D";
 
 export default function Sectors() {
   return (
@@ -25,36 +26,36 @@ export default function Sectors() {
         <div className="sectors-grid">
           {COMMODITY_SECTORS.map((sector, i) => (
             <motion.div
-              className="sector-card"
               key={sector.id}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -12, transition: { duration: 0.3 } }}
             >
-              <div className="sector-image-wrap">
-                <motion.img
-                  src={sector.image}
-                  alt={sector.title}
-                  className="sector-image"
-                  whileHover={{ scale: 1.08 }}
-                  transition={{ duration: 0.5 }}
-                />
-                <div className="sector-image-overlay" />
-              </div>
-              <div className="sector-content">
-                <span className="sector-icon">{sector.icon}</span>
-                <h3>{sector.title}</h3>
-                <p>{sector.copy}</p>
-                <motion.a
-                  href="#contact"
-                  className="sector-link"
-                  whileHover={{ x: 6 }}
-                >
-                  Learn more →
-                </motion.a>
-              </div>
+              <TiltCard3D className="sector-card" maxTilt={10}>
+                <div className="sector-image-wrap">
+                  <motion.img
+                    src={sector.image}
+                    alt={sector.title}
+                    className="sector-image"
+                    whileHover={{ scale: 1.06 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <div className="sector-image-overlay" />
+                </div>
+                <div className="sector-content">
+                  <span className="sector-icon">{sector.icon}</span>
+                  <h3>{sector.title}</h3>
+                  <p>{sector.copy}</p>
+                  <motion.a
+                    href="#contact"
+                    className="sector-link"
+                    whileHover={{ x: 6 }}
+                  >
+                    Explore Specifications →
+                  </motion.a>
+                </div>
+              </TiltCard3D>
             </motion.div>
           ))}
         </div>

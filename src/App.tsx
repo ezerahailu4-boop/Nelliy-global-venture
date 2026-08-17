@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
 import Sectors from "./components/Sectors";
+import GlobalReach from "./components/GlobalReach";
 import Products from "./components/Products";
 import Journey from "./components/Journey";
 import Areas from "./components/Areas";
@@ -22,6 +23,7 @@ export default function App() {
       <Marquee />
       <About />
       <Sectors />
+      <GlobalReach />
       <Products />
       <Journey />
       <Areas />
