@@ -90,6 +90,9 @@ export default function Footer() {
         <div className="footer-copy">
           © {currentYear} Nelly Global Venture PLC — All rights reserved.
         </div>
+        <div className="footer-credits">
+          Developed by <span className="dev-name">Ezera Hailu</span>
+        </div>
         <div className="footer-copy">Trusted Global Supply</div>
       </div>
     </footer>
